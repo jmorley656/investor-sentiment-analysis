@@ -11,9 +11,9 @@ TBC
 
 ## Goals
 As discussed above, this project aims to:
-a) Explore NLP techniques to generate investor sentiment metrics
-b) Evaluate sentiment metrics against price movements over time
-c) Investigate whether investor sentiment could be used as a leading indicator of price
+1. Explore NLP techniques to generate investor sentiment metrics
+2. Evaluate sentiment metrics against price movements over time
+3. Investigate whether investor sentiment could be used as a leading indicator of price
 
 ### Success Criteria
 To build a model that predicts a sentiment classification better than a baseline measure.
@@ -89,7 +89,7 @@ Additionally, RNS news releases could be incorporated into the charts to see if 
 ## Limitations
 With regard to the modeling part, based on assigned opinions, the main limitation was related to the highly imbalanced nature of the dataset; predicting the sentiment of a group made mostly of users who hold a stock inherently is going to present a strong positive bias.
 
-Other limitations throughout the project related to the time taken in both learning some new NLP techniques that were not covered in the course content, and the time taken to run the classification models on NLP datasets, due to the large size of them (16,000 rows, 38,000 columns)
+Other limitations throughout the project related to the time taken in both learning some new NLP techniques that were not covered in the course content, and the time taken to run the classification models on NLP datasets, due to the large size of them (16,000 rows, 38,000 columns).
 
 ## Key Learnings
-It can be seen that the above sentiment classifications appear to better correlate with the share price. On reflection, it could be less of a surprise that these classifiers appear to have worked much better than the previous models did. When the share price is performing badly, the users, who are mostly all holders, are going to be posting comments with more negative language than when it is performing well. It can be a much more arbitrary decision when a user decides to select an opinion to put in their post, and perhaps this is why the models did not perform so well
+It can be seen that the above sentiment classifications appear to better correlate with the share price. On reflection, it could be less of a surprise that these classifiers appear to have worked much better than the previous models did. When the share price is performing badly, the users, who are mostly all holders, are going to be posting comments with more negative language than when it is performing well. It can be a much more arbitrary decision when a user decides to select an opinion to put in their post, and perhaps this is why the models did not perform so well.
