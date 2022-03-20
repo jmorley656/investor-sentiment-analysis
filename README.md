@@ -44,6 +44,7 @@ One of the early observations was the opinion categorical selection that users m
 <p align="center">
   <img src="images/opinionbar_all.png" width="600"/>
 </p>
+
 ### Time Series Data Subset
 As the aims of the project were to assess correlations to price, it was important that the date was aggregated by date. Doing this yielded a second dataset with the following features:
 - Date (index): by day
@@ -57,6 +58,7 @@ This time series dataset allowed for more EDA, most notably being able to plot t
 <p align="center">
   <img src="images/range_vs_comments.png" width="800"/>
 </p>
+
 ## Feature Engineering
 As mentioned previously, the ‘opinion’ field offered a good NLP modeling problem - seeing if the word usage on negative comments and positive comments could be used to predict whether a comment was assigned positive or negative. Going back to the original dataset, the majority of comments are assigned ‘No Opinion’. Removing all of these comments gives us 16,500 assigned comments having the distribution shown below.
 <p align="center">
@@ -94,6 +96,7 @@ Taking the previously processed comments and running the sentiment classifiers a
   <img src="images/vader_posneg.png" width="800"/>
   <img src="images/vader_pos-neg.png" width="800"/>
 </p>
+
 ## Future Work
 Now that the most effective sentiment classification has been established, the natural next step would be to scrape more data and use some time series methods, to evaluate if any previous changes in sentiment could be used in a predictive manner with regards to the price.
 Expanding the dataset to look at other stocks could also be a natural next step.
