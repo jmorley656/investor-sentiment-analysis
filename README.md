@@ -44,6 +44,9 @@ One of the early observations was the opinion categorical selection that users m
 
 ![image](images/opinionbar_all.png)
 <img src="images/opinionbar_all.png" width="300">
+<p align="center">
+  <img src="images/opinionbar_all.png" width="600"/>
+</p>
 
 ### Time Series Data Subset
 As the aims of the project were to assess correlations to price, it was important that the date was aggregated by date. Doing this yielded a second dataset with the following features:
