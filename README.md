@@ -42,7 +42,7 @@ The scrape yielded a table of 120,000 comments and the following 6 columns:
 
 One of the early observations was the opinion categorical selection that users make during a post. The vast majority of posts were assigned as ‘no opinion’ by default. This offered a good NLP problem in assigning the unassigned comments based on what words were being used in the assigned ones.
 
-
+!(images/opinionbar_all.png)
 
 ### Time Series Data Subset
 As the aims of the project were to assess correlations to price, it was important that the date was aggregated by date. Doing this yielded a second dataset with the following features:
