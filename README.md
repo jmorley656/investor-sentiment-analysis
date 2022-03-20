@@ -44,7 +44,6 @@ One of the early observations was the opinion categorical selection that users m
 <p align="center">
   <img src="images/opinionbar_all.png" width="600"/>
 </p>
-
 ### Time Series Data Subset
 As the aims of the project were to assess correlations to price, it was important that the date was aggregated by date. Doing this yielded a second dataset with the following features:
 - Date (index): by day
@@ -58,13 +57,11 @@ This time series dataset allowed for more EDA, most notably being able to plot t
 <p align="center">
   <img src="images/range_vs_comments.png" width="600"/>
 </p>
-
 ## Feature Engineering
 As mentioned previously, the ‘opinion’ field offered a good NLP modeling problem - seeing if the word usage on negative comments and positive comments could be used to predict whether a comment was assigned positive or negative. Going back to the original dataset, the majority of comments are assigned ‘No Opinion’. Removing all of these comments gives us 16,500 assigned comments having the distribution shown below.
 <p align="center">
   <img src="images/opinionbar_subset.png" width="600"/>
 </p>
-
 As can be seen above, the subset of assigned opinion comments is highly unbalanced, with the vast majority assigned to strong buy. As this dataset represented holders of the stock, perhaps this shouldn't have come as too much of a surprise.
 
 In order to frame the modeling part of the project it was necessary to aggregate the assigned opinions into a binary target variable. Taking the strong bias present in the dataset into account, it was decided to assign just strong buy and buy to be a positive comment, with hold being assigned to be negative despite its literal meaning being more neutral. This also should give the models a larger sample size to work with, as there were only 19 comments assigned as sell.
@@ -74,17 +71,17 @@ For the modeling, further processing was applied to the comments to remove stop 
 
 ### Results
 A logistic regression and a random forest model was applied to both the above tables, yielding the results shown below.
+
+Baseline Accuracy: 0.8737
 <p align="center">
   <img src="images/modelscores.png" width="600"/>
 </p>
-
 As can be seen, all the models performed quite similarly, each beating the baseline accuracy by 1%. While this was an improvement over a random guess, it was relatively underwhelming in terms of a predictive model.
 
 Going back to the full dataset of 120,000 comments, including the ‘No Opinion’ comments, the best performing model can now be used to predict the positive or negative opinion of each comment. This dataset can now be treated as unseen data, meaning it cannot be evaluated with a numerical score, but what happens if the average predicted opinion is averaged over a day, brought into the previous time series dataset and plotted against the stock price over time? In the chart below, a positive prediction is assigned as 1 and negative 0, allowing the mean prediction per day to be calculated.
 <p align="center">
   <img src="images/predictions.png" width="600"/>
 </p>
-
 Again, the eye test gives a relatively underwhelming outcome, with not a lot of clear correlation between the average predicted opinion and price.
 
 ## Sentiment Analysis
@@ -97,7 +94,6 @@ Taking the previously processed comments and running the sentiment classifiers a
   <img src="images/vader_posneg.png" width="600"/>
   <img src="images/vader_pos-neg.png" width="600"/>
 </p>
-
 ## Future Work
 Now that the most effective sentiment classification has been established, the natural next step would be to scrape more data and use some time series methods, to evaluate if any previous changes in sentiment could be used in a predictive manner with regards to the price.
 Expanding the dataset to look at other stocks could also be a natural next step.
