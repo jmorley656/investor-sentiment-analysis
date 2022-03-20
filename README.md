@@ -55,7 +55,7 @@ As the aims of the project were to assess correlations to price, it was importan
 
 This time series dataset allowed for more EDA, most notably being able to plot the share price chart. In addition to this, some interesting correlations were observed in areas that were not necessarily the ones being looked at. The chart below shows a strong correlation between the daily price range plotted against the number of comments made per day. 
 <p align="center">
-  <img src="images/range_vs_comments.png" width="600"/>
+  <img src="images/range_vs_comments.png" width="800"/>
 </p>
 ## Feature Engineering
 As mentioned previously, the ‘opinion’ field offered a good NLP modeling problem - seeing if the word usage on negative comments and positive comments could be used to predict whether a comment was assigned positive or negative. Going back to the original dataset, the majority of comments are assigned ‘No Opinion’. Removing all of these comments gives us 16,500 assigned comments having the distribution shown below.
@@ -80,7 +80,7 @@ As can be seen, all the models performed quite similarly, each beating the basel
 
 Going back to the full dataset of 120,000 comments, including the ‘No Opinion’ comments, the best performing model can now be used to predict the positive or negative opinion of each comment. This dataset can now be treated as unseen data, meaning it cannot be evaluated with a numerical score, but what happens if the average predicted opinion is averaged over a day, brought into the previous time series dataset and plotted against the stock price over time? In the chart below, a positive prediction is assigned as 1 and negative 0, allowing the mean prediction per day to be calculated.
 <p align="center">
-  <img src="images/predictions.png" width="600"/>
+  <img src="images/predictions.png" width="800"/>
 </p>
 Again, the eye test gives a relatively underwhelming outcome, with not a lot of clear correlation between the average predicted opinion and price.
 
@@ -91,8 +91,8 @@ Another area to explore was using sentiment classification techniques, to score 
 
 Taking the previously processed comments and running the sentiment classifiers above, we are able to follow the same steps as before, aggregate the average positive and negative scores per day and append them to the time series dataset. The charts below show the slightly better performing VADER sentiment scores.
 <p align="center">
-  <img src="images/vader_posneg.png" width="600"/>
-  <img src="images/vader_pos-neg.png" width="600"/>
+  <img src="images/vader_posneg.png" width="800"/>
+  <img src="images/vader_pos-neg.png" width="800"/>
 </p>
 ## Future Work
 Now that the most effective sentiment classification has been established, the natural next step would be to scrape more data and use some time series methods, to evaluate if any previous changes in sentiment could be used in a predictive manner with regards to the price.
