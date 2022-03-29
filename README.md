@@ -79,7 +79,7 @@ Baseline Accuracy: 0.8737
   <img src="images/modelscores.png" width="600"/>
 </p>
 As can be seen, all the models performed quite similarly, each beating the baseline accuracy by 1%. While this was an improvement over a random guess, it was relatively underwhelming in terms of a predictive model.
-
+</p>
 Going back to the full dataset of 120,000 comments, including the ‘No Opinion’ comments, the best performing model can now be used to predict the positive or negative opinion of each comment. This dataset can now be treated as unseen data, meaning it cannot be evaluated with a numerical score, but what happens if the average predicted opinion is averaged over a day, brought into the previous time series dataset and plotted against the stock price over time? In the chart below, a positive prediction is assigned as 1 and negative 0, allowing the mean prediction per day to be calculated.
 <p align="center">
   <img src="images/predictions.png" width="800"/>
