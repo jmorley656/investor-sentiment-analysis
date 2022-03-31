@@ -1,10 +1,10 @@
 # Retail Investor Sentiment Analysis
 ## Overview
-Early in 2021, a slowly fading US high-street retailer by the name of GameStop underwent a remarkable, yet short-lived, recovery phase, seeing its publicly listed share price skyrocket by 1,900% over a 2-week period. The move was prompted not by business fundamentals, but rather a large online community of retail investors on the popular sub-reddit WallStreetBets. Online comments encouraged users to club together to buy the stock, in an effort to ‘short-squeeze’ a single larger entity who had shorted the stock. Once the stock passed a certain threshold, the large short position was closed out causing further dramatic price rises.
-
-The event was significant enough for US financial regulators to examine the ‘integrity of markets’, with some suggestions of market manipulation being at play. Perhaps more interestingly from the perspective of a retail investor, was the demonstration of influence that online communities can have in financial markets.
-
-This project aims to use Natural Language Processing techniques to measure investor sentiment, based on posts that users make on an online financial share chat website, and to investigate if the sentiment measure has any correlation with the price of the stock. This website hosts dedicated share chat threads for individual stocks, some of which have a good level of activity for smaller AIM (LSE:AIM) listed companies. The AIM stock market consists of smaller companies due to its more flexible regulatory system. The hope in targeting an active message board, for a smaller to medium market cap company, is to cover as large as possible proportion of the retail investors for the stock in question.
+In early 2021 the Gamestop stock price underwent a significantly volatile period, almost all of which can be credited to the WallStreetBets subreddit. Among other things, the event brought attention to the power and influence online communities can have when it comes to the stock market.
+</p>
+This project aims to use Natural Language Processing techniques to measure investor sentiment, based on posts that users make on an online financial share chat website (not WallStreetBets), and to investigate if the sentiment measure has any correlation with the price of the stock. The website being scraped hosts dedicated share chat threads for individual stocks, some of which have a good level of activity for smaller AIM (LSE:AIM) listed companies. 
+</p>
+The AIM stock market consists of smaller companies due to its more flexible regulatory system. The hope in targeting an active message board, for a smaller to medium market cap company, is to cover as large as possible proportion of the retail investors for the stock in question.
 
 ## Repository Contents
 Notebooks:
