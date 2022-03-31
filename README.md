@@ -7,7 +7,15 @@ The event was significant enough for US financial regulators to examine the ‘i
 This project aims to use Natural Language Processing techniques to measure investor sentiment, based on posts that users make on an online financial share chat website, and to investigate if the sentiment measure has any correlation with the price of the stock. This website hosts dedicated share chat threads for individual stocks, some of which have a good level of activity for smaller AIM (LSE:AIM) listed companies. The AIM stock market consists of smaller companies due to its more flexible regulatory system. The hope in targeting an active message board, for a smaller to medium market cap company, is to cover as large as possible proportion of the retail investors for the stock in question.
 
 ## Repository Contents
-TBC
+Notebooks:
+- 1_Webscrape
+- 2_Cleaning
+- 3_EDA_Models
+- 4_Sentiment_Analysis
+- 5_Timeline_Charts
+
+Resources:
+- sentiment_words.csv
 
 ## Goals
 As discussed above, this project aims to:
